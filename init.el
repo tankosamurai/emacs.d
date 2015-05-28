@@ -21,8 +21,7 @@
 
 (use-package expand-region
   :bind
-  ("C-," . er/expand-region)
-  ("C-." . er/contract-region))
+  ("C-c e" . er/expand-region))
 
 (use-package company
   :config
@@ -53,6 +52,11 @@
   :bind
   ("C-c m" . magit-status))
 
+(use-package wdired
+  :config
+  (bind-keys :map dired-mode-map
+    ("r" . wdired-change-to-wdired-mode)))
+
 (use-package dired-subtree
   :config
   (bind-keys :map dired-mode-map
@@ -80,6 +84,7 @@
   :init
   (helm-mode t)
   :bind
+  ("C-x b" . helm-buffers-list)
   ("C-c h" . helm-mini))
 
 (use-package auto-save-buffers-enhanced
@@ -89,6 +94,10 @@
 (use-package ws-butler
   :config
   (ws-butler-global-mode))
+
+(use-package haskell-mode
+  :init
+  (add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent))
 
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
