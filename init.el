@@ -11,6 +11,8 @@
 
 (use-package better-defaults)
 
+(use-package zenburn-theme)
+
 (use-package pallet
   :init
   (pallet-mode t))
@@ -25,6 +27,8 @@
 
 (use-package company
   :config
+  (setq company-idle-delay 0.125)
+  (setq company-minimum-prefix-length 1)
   (global-company-mode))
 
 (use-package shackle
@@ -64,7 +68,6 @@
 
 (use-package helm-company
   :config
-  (setq company-idle-delay 0.1)
   (bind-keys :map company-mode-map
     ("C-:" . helm-company))
   (bind-keys :map company-active-map
@@ -97,7 +100,7 @@
 
 (use-package haskell-mode
   :init
-  (add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent))
+  (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation))
 
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)

@@ -7,6 +7,7 @@
 (depends-on "better-defaults")
 (depends-on "bind-key")
 (depends-on "cask")
+(depends-on "coffee-mode")
 (depends-on "color-theme-sanityinc-tomorrow")
 (depends-on "company")
 (depends-on "dash")
