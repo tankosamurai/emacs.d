@@ -43,6 +43,7 @@
 (depends-on "smooth-scrolling")
 (depends-on "use-package")
 (depends-on "web-mode")
+(depends-on "whitespace-cleanup-mode")
 (depends-on "ws-butler")
 (depends-on "yasnippet")
 (depends-on "zenburn-theme")

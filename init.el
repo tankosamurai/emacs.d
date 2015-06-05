@@ -90,13 +90,9 @@
   ("C-x b" . helm-buffers-list)
   ("C-c h" . helm-mini))
 
-(use-package auto-save-buffers-enhanced
-  :config
-  (auto-save-buffers-enhanced t))
-
-(use-package ws-butler
-  :config
-  (ws-butler-global-mode))
+(use-package whitespace-cleanup-mode
+  :init
+  (global-whitespace-cleanup-mode))
 
 (use-package haskell-mode
   :init
