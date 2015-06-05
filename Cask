@@ -23,7 +23,6 @@
 (depends-on "guru-mode")
 (depends-on "haskell-mode")
 (depends-on "helm")
-(depends-on "helm-c-yasnippet")
 (depends-on "helm-projectile")
 (depends-on "htmlize")
 (depends-on "idle-highlight-mode")
