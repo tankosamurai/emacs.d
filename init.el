@@ -25,11 +25,18 @@
   :bind
   ("C-c e" . er/expand-region))
 
+(use-package yasnippet
+  :init
+  (yas-global-mode t))
+
 (use-package company
+  :init
+  (global-company-mode)
   :config
   (setq company-idle-delay 0.125)
   (setq company-minimum-prefix-length 1)
-  (global-company-mode))
+  :bind
+  ("C-c y" . company-yasnippet))
 
 (use-package shackle
   :config
@@ -66,13 +73,6 @@
   (bind-keys :map dired-mode-map
     ("i" . dired-subtree-toggle)))
 
-(use-package helm-company
-  :config
-  (bind-keys :map company-mode-map
-    ("C-:" . helm-company))
-  (bind-keys :map company-active-map
-    ("C-:" . helm-company)))
-
 (use-package projectile
   :config
   (setq projectile-completion-system 'grizzl))
@@ -107,8 +107,8 @@
 (setq-default inhibit-startup-screen t)
 (setq-default inhibit-splash-screen t)
 (setq-default truncate-lines t)
-;; (setq-default make-backup-files nil)
-;; (setq-default auto-save-default nil)
+(setq-default make-backup-files nil)
+(setq-default auto-save-default nil)
 (setq-default debug-on-error t)
 (setq-default dired-listing-switches "-aBhl  --group-directories-first")
 (setq-default frame-title-format "%b - emacs")
