@@ -111,6 +111,7 @@
 (setq-default require-final-newline t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-auto-revert-mode t)
+(global-unset-key (kbd "C-x C-c"))
 (cua-mode t)
 (column-number-mode t)
 
