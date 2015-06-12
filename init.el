@@ -38,12 +38,6 @@
   :bind
   ("C-c y" . company-yasnippet))
 
-(use-package shackle
-  :config
-  (shackle-mode)
-  (setq shackle-rules '(
-    ("\\`\\*helm.*?\\*\\'" :regexp t :align below :ratio 0.8))))
-
 (use-package smooth-scrolling
   :config
   (set 'smooth-scroll-margin 2))
@@ -98,6 +92,9 @@
   :init
   (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation))
 
+(when (eq system-type 'gnu/linux)
+  (setq-default dired-listing-switches "-aBhl --group-directories-first"))
+
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 (setq-default inhibit-startup-screen t)
@@ -106,7 +103,6 @@
 (setq-default make-backup-files nil)
 (setq-default auto-save-default nil)
 (setq-default debug-on-error t)
-(setq-default dired-listing-switches "-aBhl  --group-directories-first")
 (setq-default frame-title-format "%b - emacs")
 (setq-default require-final-newline t)
 (fset 'yes-or-no-p 'y-or-n-p)

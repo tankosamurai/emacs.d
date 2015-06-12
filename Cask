@@ -38,7 +38,6 @@
 (depends-on "projectile")
 (depends-on "s")
 (depends-on "scala-mode2")
-(depends-on "shackle")
 (depends-on "smartparens")
 (depends-on "smex")
 (depends-on "smooth-scrolling")
