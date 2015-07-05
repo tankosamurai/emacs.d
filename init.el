@@ -11,7 +11,7 @@
 
 (use-package better-defaults)
 
-(use-package zenburn-theme)
+(use-package tomorrow-color-theme)
 
 (use-package pallet
   :init
@@ -40,7 +40,7 @@
 
 (use-package smooth-scrolling
   :config
-  (set 'smooth-scroll-margin 2))
+  (set 'smooth-scroll-margin 1))
 
 (use-package smartparens
   :config
@@ -92,8 +92,12 @@
   :init
   (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation))
 
-(when (eq system-type 'gnu/linux)
+(cond
+ ((eq system-type 'gnu/linux)
   (setq-default dired-listing-switches "-aBhl --group-directories-first"))
+ ((eq window-system 'mac)
+  (setq-default ns-command-modifier 'meta)
+  (setq-default ns-alternate-modifier 'super)))
 
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
