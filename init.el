@@ -13,6 +13,11 @@
 
 (use-package tomorrow-color-theme)
 
+(use-package smart-mode-line
+  :init
+  (setq sml/no-confirm-load-theme t)
+  (sml/setup))
+
 (use-package pallet
   :init
   (pallet-mode t))
