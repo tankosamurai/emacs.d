@@ -15,6 +15,7 @@
 
 (use-package smart-mode-line
   :init
+  (setq sml/theme 'respectful)
   (setq sml/no-confirm-load-theme t)
   (sml/setup))
 
@@ -43,9 +44,7 @@
   :bind
   ("C-c y" . company-yasnippet))
 
-(use-package smooth-scrolling
-  :config
-  (set 'smooth-scroll-margin 1))
+(use-package smooth-scrolling)
 
 (use-package smartparens
   :config
@@ -57,7 +56,6 @@
 
 (use-package magit
   :init
-  (setq magit-last-seen-setup-instructions "1.4.0")
   (setq magit-status-buffer-switch-function 'switch-to-buffer)
   :bind
   ("C-c m" . magit-status))
@@ -115,6 +113,7 @@
 (setq-default frame-title-format "%b - emacs")
 (setq-default require-final-newline t)
 (fset 'yes-or-no-p 'y-or-n-p)
+(load-theme 'sanityinc-tomorrow-blue t)
 (global-auto-revert-mode t)
 (global-unset-key (kbd "C-x C-c"))
 (cua-mode t)
