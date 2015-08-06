@@ -113,7 +113,7 @@
 (setq-default frame-title-format "%b - emacs")
 (setq-default require-final-newline t)
 (fset 'yes-or-no-p 'y-or-n-p)
-(load-theme 'sanityinc-tomorrow-blue t)
+(load-theme 'zenburn t)
 (global-auto-revert-mode t)
 (global-unset-key (kbd "C-x C-c"))
 (cua-mode t)

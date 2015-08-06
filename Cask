@@ -20,6 +20,7 @@
 (depends-on "flycheck")
 (depends-on "flycheck-cask")
 (depends-on "flycheck-haskell")
+(depends-on "gist")
 (depends-on "grizzl")
 (depends-on "guru-mode")
 (depends-on "haskell-mode")
